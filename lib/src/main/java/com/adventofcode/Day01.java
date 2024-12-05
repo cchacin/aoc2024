@@ -2,6 +2,7 @@ package com.adventofcode;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.PriorityQueue;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -10,7 +11,9 @@ public class Day01 {
 
     public static void main(String... args) throws Exception {
         var path = Paths.get(
-                Day01.class.getClassLoader().getResource("day01.txt").toURI()
+                Objects.requireNonNull(
+                        Day01.class.getClassLoader().getResource("day01.txt")
+                ).toURI()
         );
         var lines = Files.readAllLines(path);
         var listA = new PriorityQueue<Long>(lines.size());
