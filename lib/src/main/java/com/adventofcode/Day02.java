@@ -32,8 +32,8 @@ public class Day02 {
 
     static boolean isLineSafe(List<Integer> levels) {
         var size = levels.size();
-        var isUp = false;
-        var isDown = false;
+        var isIncreasing = false;
+        var isDecreasing = false;
         for (int i = 0; i < size; i++) {
             if (i < size - 1) {
                 var a = levels.get(i);
@@ -45,11 +45,14 @@ public class Day02 {
                     return false;
                 }
                 if (i == 0) {
-                    isUp = a < b;
-                    isDown = !isUp;
+                    if (a < b) {
+                        isIncreasing = true;
+                    } else {
+                        isDecreasing = true;
+                    }
                     continue;
                 }
-                if ((isDown && a < b) || (isUp && a > b)) {
+                if ((isDecreasing && a < b) || (isIncreasing && a > b)) {
                     return false;
                 }
             }
