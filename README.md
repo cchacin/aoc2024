@@ -14,3 +14,6 @@ https://adventofcode.com/2024
 
 [![Day 03: Mull It Over](https://img.youtube.com/vi/E2YuJ3Uxg9o/0.jpg)](https://www.youtube.com/watch?v=E2YuJ3Uxg9o)
 
+## Day 04: Ceres Search
+
+[![Day 04: Ceres Search](https://img.youtube.com/vi/kVFKwLP13wI/0.jpg)](https://www.youtube.com/watch?v=kVFKwLP13wI)
